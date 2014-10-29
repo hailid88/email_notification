@@ -1,5 +1,5 @@
 __author__ = 'hailid'
-##this python script is used to parse the sensors status in nagios every week and automatically generate the report in table format. 
+##this python script is used to parse the status of the hosts in nagios every week and automatically generate the report in table format. 
 
 from re import sub
 import smtplib
