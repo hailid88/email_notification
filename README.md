@@ -1,4 +1,6 @@
-email_notification
+Alert System
 ==================
 
-Automatically send the status information of the hosts in Nagios via Email. 
+An alert system to generate informative reports on the status of the sensors, which signicantly reduced the maintenance cost.
+
+
