@@ -199,13 +199,18 @@ def send_email():
 def main():
     interval_check = 12*3600  # check every 12 hours, so that no timer is needed. 
     #send_email()
-    while(True):
-        time.sleep(interval_check)
-        datetime_now = datetime.now()
-        if(datetime_now.day == 1 or datetime_now.day==8 or datetime_now.day ==15 or datetime_now.day ==22 or datetime_now.day ==29):  # send email every week
-            send_email()
+    condition = True
+    while(condition):
+        try:
+            time.sleep(interval_check)
+            datetime_now = datetime.now()
+            if(datetime_now.day == 1 or datetime_now.day==8 or datetime_now.day ==15 or datetime_now.day ==22 or datetime_now.day ==29):  # send email every week
+                send_email()
+                pass
             pass
-        pass
+        except Exception as e:
+            print e
+            condition = False
 
 if __name__ =='__main__':
    main()
